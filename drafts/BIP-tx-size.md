@@ -1,3 +1,5 @@
+# Transaction size limits
+
 <pre>
   BIP: xxx
   Layer: Consensus (hard fork)
@@ -8,21 +10,21 @@
   Created: 2017-05-29
 </pre>
 
-==Abstract==
+## Abstract
 
 Transaction serialized size is limited to 1,000,000 bytes, excluding witness data.
 
-==Motivation==
+## Motivation
 
-# Maximize compatibility with current software.
-# Hard cap on some algorithmic and data size DoS's.
+* Maximize compatibility with current software.
+* Hard cap on some algorithmic and data size DoS's.
 
-==Specification==
+## Specification
 
-# MAX_TX_BASE_SIZE is defined as 1,000,000 bytes.
-# Any transaction with a non-witness serialized size exceeding MAX_TX_BASE_SIZE is invalid.
+* MAX_TX_BASE_SIZE is defined as 1,000,000 bytes.
+* Any transaction with a non-witness serialized size exceeding MAX_TX_BASE_SIZE is invalid.
 
-==Backward compatibility==
+## Backward compatibility
 
 This is compatible with existing software.  No current software will generate a transaction larger than 1,000,000 bytes, because that transaction will not be relayed or mined.
 
