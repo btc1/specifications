@@ -1,7 +1,7 @@
 # Transaction size limits
 
 <pre>
-  BIP: xxx
+  PCS: 2017-0001
   Layer: Consensus (hard fork)
   Title: Transaction size limits
   Author: Jeff Garzik <jgarzik@gmail.com>
