@@ -25,9 +25,9 @@ This BIP is dual-licensed under the Open Publication License and BSD 2-clause li
 
 ## Motivation
 
-# Enabling Segwit
-# Reducing temporarily the fee pressure until other scaling techniques such as the Lighntning Network, sidechains, drivechains and extension blocks prove to be useful or not for Bitcoin scaling.
-# Maximum transaction size is kept, to maximize compatibility with current software and prevent algorithmic and data size DoS's.
+* Enabling Segwit
+* Reducing temporarily the fee pressure until other scaling techniques such as the Lighntning Network, sidechains, drivechains and extension blocks prove to be useful or not for Bitcoin scaling.
+* Maximum transaction size is kept, to maximize compatibility with current software and prevent algorithmic and data size DoS's.
 
 ## Rationale
 
@@ -39,15 +39,15 @@ Assuming the current transaction pattern is replicated in a 2 MB plain-sized blo
 
 ### Consensus
 
-# The no-wit block size is defined as the serialized block size without witness programs.
-# Deploy a modified BIP91 to activate Segwit. The BIP9 version bit 4 is redefined as the segwit2x signal.
-# If segwit2x activates at block N, then at block N+12960 the block weight limit rises from 4,000,000 to 8,000,000. Also the maximum sigop cost per blocks rises from 80,0000 to 160,000.  Both changes represent hard-forks.
-# The block that activates the hard-fork must have a no-wit block size greater than 1,000,000 bytes.
-# Any transaction with a non-witness serialized size exceeding 1,000,000 is invalid.
+* The no-wit block size is defined as the serialized block size without witness programs.
+* Deploy a modified BIP91 to activate Segwit. The BIP9 version bit 4 is redefined as the segwit2x signal.
+* If segwit2x activates at block N, then at block N+12960 the block weight limit rises from 4,000,000 to 8,000,000. Also the maximum sigop cost per blocks rises from 80,0000 to 160,000.  Both changes represent hard-forks.
+* The block that activates the hard-fork must have a no-wit block size greater than 1,000,000 bytes.
+* Any transaction with a non-witness serialized size exceeding 1,000,000 is invalid.
 
 ### Non-consensus
 
-# BIP91 is modified so the signal "segsignal" is replaced by "segwit2x". This affects the rpc mining interface (getblocktemplate).
+* BIP91 is modified so the signal "segsignal" is replaced by "segwit2x". This affects the rpc mining interface (getblocktemplate).
 
 
 ## Backward compatibility
